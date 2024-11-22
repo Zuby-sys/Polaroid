@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Showcase</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #000000;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 'Gill Sans MT',
+            ' Calibri', 'Trebuchet MS', 'sans-serif';
+        }
+        .fon_scroll {
+            margin:0 auto;
+            background-color:#ffffff;
+            background-image:url("https://avatars.mds.yandex.net/i?id=f355a5a3e1b45fc7f88b97cecbe8e0e8_l-5240761-images-thumbs&n=13");
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            }
+    </style>
+</head>
+ 
+<body>
+    <div class="fon_scroll">
+        <section>      
+            <h1 style="background-color: #ffffff;width:500px;">Фоточки</h1>
+                {% for item in result_raw %}
+            <a class="IMGLIST" href="{{ item.way }}"><img src="data:image/png;base64,{{ item.way }}" /></a>
+                {% endfor %}
+        </section>
+    </div>
+</body>
+ 
+</html>
